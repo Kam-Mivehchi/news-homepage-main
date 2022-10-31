@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+   --primary-orange: hsl(35, 77%, 62%);
+   --primary-red: hsl(5, 85%, 63%);
+   --off-white: hsl(36, 100%, 99%);
+   --grayish-blue: hsl(233, 8%, 79%);
+   --dark-grayish-blue: hsl(236, 13%, 42%);
+   --dark-blue: hsl(240, 100%, 5%);
+}
+
+* {
+   box-sizing: border-box;
+   font-family: Inter, Tahoma, Geneva, Verdana, sans-serif
+}
+
+body {
+   padding: 1em;
+   background-color: var(--off-white);
+}
+
+h1 {
+   font-size: 250%;
+   font-weight: 800;
+   margin: .5em 0;
+}
+
+p,
+h2 {
+   line-height: 1.5em;
+   font-size: 1em;
+   color: var(--dark-grayish-blue)
+}
+
+header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+button {
+   background-color: transparent;
+   border: none;
+}
+
+/* hidden desktop styles */
+ul {
+   display: none;
+}
+
+
+main {
+   display: grid;
+   grid-template-columns: repeat(12, 1fr);
+   grid-template-rows: repeat(3, 1fr);
+
+}
+
+section,
+aside {
+   grid-area: span 12/span 12;
+   margin: 2em 0;
+}
+
+.mobile-hero {
+   width: 100%;
+}
+
+.desktop-hero {
+   display: none;
+}
+
+section button {
+   margin: 1.5em 0;
+   background-color: var(--primary-red);
+   color: var(--off-white);
+   font-size: 1em;
+   font-weight: 500;
+   padding: 1em 2em;
+   letter-spacing: .2em;
+}
+
+aside {
+   background-color: var(--dark-blue);
+   color: var(--off-white);
+   padding: 1em;
+   font-weight: 700;
+}
+
+aside h2 {
+   font-size: 200%;
+
+   color: var(--primary-orange)
+}
+
+aside p {
+   color: var(--grayish-blue);
+   font-weight: 400;
+}
+
+aside div {
+   margin: 0;
+   padding: 2em 0;
+
+}
+
+aside div:not(:last-child) {
+   border-bottom: 1px solid var(--grayish-blue)
+}
+
+aside h3 {
+   margin: .5em 0;
+   font-size: 125%;
+}
+
+footer {
+   font-size: 11px;
+   text-align: center;
+}
+
+footer a {
+   color: hsl(228, 45%, 44%);
+}
