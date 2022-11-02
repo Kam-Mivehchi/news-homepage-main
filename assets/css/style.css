@@ -10,8 +10,8 @@
 }
 
 * {
+   font-family: Inter, Tahoma, Geneva, Verdana, sans-serif;
    box-sizing: border-box;
-   font-family: Inter, Tahoma, Geneva, Verdana, sans-serif
 }
 
 body {
@@ -36,16 +36,42 @@ header {
    display: flex;
    justify-content: space-between;
    align-items: center;
+   position: relative;
 }
 
 button {
    background-color: transparent;
    border: none;
+
+}
+
+ul button {
+   position: fixed;
+   top: 1.5em;
+   right: 1.5em;
 }
 
 /* hidden desktop styles */
 ul {
    display: none;
+   background: var(--off-white);
+
+   position: absolute;
+   z-index: 10;
+   top: 0;
+   right: 0;
+   width: 70%;
+   height: 100vh;
+   padding: 10em 1em;
+   transition: all 0.5s ease;
+}
+
+
+
+li {
+   margin: 2em 1em;
+   font-weight: 400;
+   font-family: Inter, Tahoma, Geneva, Verdana, sans-serif
 }
 
 
@@ -163,7 +189,7 @@ footer a {
    color: hsl(228, 45%, 44%);
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1440px) {
    body {
       max-width: 70%;
       margin: 0 auto;
@@ -202,10 +228,10 @@ footer a {
 
    #hero button {
       grid-column: 2/span 1;
-      grid-row: 3/span 1;
-      max-width: 75%;
+
+      max-width: 50%;
       font-size: .87em;
-      padding: 0 1em;
+      padding: 1em;
 
    }
 
@@ -222,6 +248,7 @@ footer a {
    #top3 {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
+      gap: 1em;
 
    }
 

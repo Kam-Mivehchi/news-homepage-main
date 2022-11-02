@@ -18,8 +18,10 @@
   <header>
     <a href="/"><img src="./assets/images/logo.svg" alt="logo"></a>
     <nav>
-      <button><img src="./assets/images/icon-menu.svg" alt=""></button>
+      <button class="open"><img src="./assets/images/icon-menu.svg" alt=""></button>
       <ul>
+        <button class="close"><img src="./assets/images/icon-menu-close.svg" alt=""></button>
+
         <li>
           Home
         </li>
@@ -120,11 +122,27 @@
 
 
     </section>
+    <footer>
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://www.kamyarmivehchi.com">Kamyar Mivehchi</a>.
+    </footer>
   </main>
-  <footer>
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="https://www.kamyarmivehchi.com">Kamyar Mivehchi</a>.
-  </footer>
+
+  <script>
+    let sidebar = document.querySelector('ul')
+    document.querySelector('.open').addEventListener('click', (e) => {
+      console.log(e)
+      sidebar.style.display = 'block'
+      document.querySelector('main').style.opacity = '30%'
+
+    })
+    document.querySelector('.close').addEventListener('click', (e) => {
+      console.log(e)
+      sidebar.style.display = 'none'
+      document.querySelector('main').style.opacity = '100%'
+
+    })
+  </script>
 </body>
 
 </html>
