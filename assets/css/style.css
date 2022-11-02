@@ -162,3 +162,68 @@ footer {
 footer a {
    color: hsl(228, 45%, 44%);
 }
+
+@media (min-width: 900px) {
+   body {
+      max-width: 70%;
+      margin: 0 auto;
+   }
+
+   main {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      /* grid-template-rows: repeat(3, 1fr); */
+      column-gap: 2em;
+
+   }
+
+   #hero {
+      grid-column: span 8;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 2em;
+   }
+
+   .desktop-hero {
+      display: flex;
+      grid-column: span 2;
+      grid-row: span 1;
+      width: 100%;
+   }
+
+   .mobile-hero {
+      display: none;
+   }
+
+   aside {
+      grid-column: span 4;
+
+   }
+
+   #hero button {
+      grid-column: 2/span 1;
+      grid-row: 3/span 1;
+      max-width: 75%;
+      font-size: .87em;
+      padding: 0 1em;
+
+   }
+
+
+   nav button {
+      display: none;
+   }
+
+   nav ul {
+      display: flex;
+      gap: 2em;
+   }
+
+   #top3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+   }
+
+   #top3 img {}
+}
