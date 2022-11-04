@@ -261,9 +261,16 @@ footer a {
 
    }
 
+   #hero button:hover {
+      background-color: var(--dark-blue);
+      cursor: pointer;
+   }
+
 
    nav button {
       display: none;
+      cursor: pointer;
+
    }
 
    nav ul {
@@ -273,6 +280,7 @@ footer a {
       height: auto;
       z-index: 1;
       gap: 2em;
+      cursor: pointer;
    }
 
    #top3 {
@@ -282,5 +290,16 @@ footer a {
 
    }
 
-   #top3 img {}
+   /* aside h3 {
+      cursor: pointer;
+   } */
+   aside h3:hover {
+      cursor: pointer;
+      color: var(--primary-orange)
+   }
+
+   #top3 h3:hover {
+      cursor: pointer;
+      color: var(--primary-red)
+   }
 }
