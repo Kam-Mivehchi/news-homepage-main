@@ -52,10 +52,9 @@ ul button {
 }
 
 /* hidden desktop styles */
-ul {
+nav ul {
    display: none;
    background: var(--off-white);
-
    position: absolute;
    z-index: 10;
    top: 0;
@@ -72,6 +71,10 @@ li {
    margin: 2em 1em;
    font-weight: 400;
    font-family: Inter, Tahoma, Geneva, Verdana, sans-serif
+}
+
+li:hover {
+   color: var(--primary-orange)
 }
 
 
@@ -111,6 +114,8 @@ aside {
    color: var(--off-white);
    padding: 1em;
    font-weight: 700;
+   display: flex;
+   flex-direction: column;
 }
 
 aside h2 {
@@ -189,6 +194,7 @@ footer a {
    color: hsl(228, 45%, 44%);
 }
 
+
 @media (min-width: 1440px) {
    body {
       max-width: 70%;
@@ -207,14 +213,33 @@ footer a {
       grid-column: span 8;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+      align-content: start;
       row-gap: 2em;
    }
 
+   #hero h1 {
+      font-size: 400%;
+      margin: 0;
+   }
+
+   #hero button {
+      font-size: 400%;
+      width: 250%;
+   }
+
+   #hero p {
+      font-size: 125%;
+      margin: 0;
+
+   }
+
    .desktop-hero {
-      display: flex;
+      display: block;
       grid-column: span 2;
       grid-row: span 1;
       width: 100%;
+      padding-top: .5em;
+      margin-bottom: 0;
    }
 
    .mobile-hero {
@@ -223,7 +248,8 @@ footer a {
 
    aside {
       grid-column: span 4;
-
+      justify-content: space-evenly;
+      font-size: 110%;
    }
 
    #hero button {
@@ -231,7 +257,7 @@ footer a {
 
       max-width: 50%;
       font-size: .87em;
-      padding: 1em;
+      padding: 1em 1.5em;
 
    }
 
@@ -242,13 +268,17 @@ footer a {
 
    nav ul {
       display: flex;
+      position: static;
+      padding: 0;
+      height: auto;
+      z-index: 1;
       gap: 2em;
    }
 
    #top3 {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 1em;
+      column-gap: 2em;
 
    }
 
